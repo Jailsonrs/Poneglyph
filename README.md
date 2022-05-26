@@ -34,5 +34,5 @@
 
 ```
 
-![alt text](screen.png)
+![alt text](appscreen.png)
 
