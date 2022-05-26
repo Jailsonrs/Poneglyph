@@ -33,3 +33,6 @@
 └── UMAP-GMM.ipynb
 
 ```
+
+![alt text](screen.png)
+
