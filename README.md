@@ -1,5 +1,7 @@
 # RetailClustering
 
+
+### Estrutura do projeto
 ```
 .
 ├── app
