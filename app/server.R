@@ -1,5 +1,6 @@
 source("src/R/libs.R")
 source("src/R/MyGgthemes.R")
+library(MASS)
 library(glue)
 library(shiny)
 library(tidyverse)
@@ -7,8 +8,10 @@ library(DT)
 library(viridis)
 library("scales")
 library(dplyr)
+library(hexbin)
 options(shiny.maxRequestSize = 500*1024^2)
 library(viridis)
+
 
 embeddings <- read.csv('./data/transformed/UMAP_embeddings.csv')
 df_municipios <- data.table::fread("./data/raw/dados_municipais.csv")
@@ -16,9 +19,8 @@ df_clusterizado <- data.table::fread("./data/transformed/clustered_dataset")
 embeddings <- data.frame(embeddings[,c(4,7)], df_clusterizado[,'model'])
 df_cluster_unscalled <- data.frame(df_municipios, df_clusterizado[,'model'])
 df_cluster_unscalled <- df_cluster_unscalled %>%
-separate("Município", sep="\\(", into = c("Municip","estado")) %>% select(-c("Municipio"))
+	tidyr::separate("Município", sep="\\(", into = c("Municip","estado"))  %>% dplyr::select(-4)
 df_cluster_unscalled[,'estado'] <- str_remove(df_cluster_unscalled[,'estado'],pattern='\\)')
-
 
 function(session, input, output){
 
@@ -74,5 +76,28 @@ function(session, input, output){
 			)
 		)
 	})
+
+
+	output$hist2d <- renderPlotly({
+		embeddings %>%
+		 ggplot( aes(emb2, emb5))+ 
+  		 stat_density_2d(aes(fill = ..density..), geom = "raster", contour = FALSE) +
+  		 scale_x_continuous(expand = c(0, 0)) +
+  		 scale_y_continuous(expand = c(0, 0)) +
+  		 scale_fill_viridis(option = 'rocket', direction = -1)+
+  	     theme(panel.border = element_blank(),
+		       axis.line.x.bottom = element_line(size=0.2,colour='grey'),
+			   panel.grid.major.y = element_line(size=0.1, colour = "grey70"),
+			   axis.text.x=element_text(angle=0,hjust=1,face=2,size=10,colour="grey30"),
+			   panel.background = element_rect(fill = '#00082f')) -> h3
+  	     h3
+
+	})
+
+	output$densidade3d <- renderPlotly({
+	kd <- with(embeddings, MASS::kde2d(emb2, emb5, n = 50))
+	plot_ly(x = kd$x, y = kd$y, z = kd$z) %>% add_surface()
+	})
+	
 }
 
