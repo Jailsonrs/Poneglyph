@@ -4,6 +4,12 @@
 	$(window).load(setTimeout(function() {
 		// Animate loader off screen
 		$(".se-pre-con").fadeOut("slow");;
-	},10000));
+	},4000));
 
-
+$('.tabbutton').click(function() {
+  $('.tabbutton.active').removeClass('active');
+  $(this).addClass('active');
+  var tabNumber = $(this).attr('data-value');
+  var tabToOpen = ".conteudo[data-value='" + tabNumber + "']"; 
+  $(tabToOpen).addClass('teste');
+})

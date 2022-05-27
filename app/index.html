@@ -1,19 +1,43 @@
 <!DOCTYPE html>  
 <html lang="en"> 
 <head>
-<title>Clusterização</title>
-{{ useShinyjs()}}
+  {{ useShinyjs()}}
 {{ bootstrapLib()}}
 {{ headContent() }}
+{{tags$script(src="https://cdn.plot.ly/plotly-1.6.3.min.js")}}
+{{tags$script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")}}
+{{tags$script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js")}}  
+{{tags$script("$.noConflict(true);")}}
+{{includeScript("www/alert.js")}}
+<title>Clusterização</title>
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="style.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&family=Merriweather+Sans:ital,wght@1,800&display=swap');
 </style>
 </head>
 
 <body id="bootstrap-override" class="corpo">
-  <div class="se-pre-con"></div> 
+  <div class="se-pre-con">
+      <div class="wrapper">
+  <span class="circle circle-1"></span>
+  <span class="circle circle-2"></span>
+  <span class="circle circle-3"></span>
+  <span class="circle circle-4"></span>
+  <span class="circle circle-5"></span>
+  <span class="circle circle-6"></span>
+  <span class="circle circle-7"></span>
+  <span class="circle circle-8"></span>
+</div>
+
+
+
+
+  </div> 
   <nav class="navbar navbar-fixed-top">
   <div class="container-fluid">
   <div class="navbar-header">
@@ -102,32 +126,33 @@ background-color: #084270 !important;
   </div>
 </nav>
 
-    <div class="container-fluid tab conteudo">
+    <div class="container-fluid tab">
       <div class="container-fluid">
         <div class="col-lg-12">
           <div class="tabbable tabs-above">
+
             <ul class="nav nav-tabs">
-              <li class="active">
-                <a href="#tab-9462-1" data-toggle="tab" data-value="Plot">Clusters</a>
+              <li >
+                <a class = 'tabbutton active' href="#tab-9462-1" data-toggle="tab" data-tab = '1' data-value="Plot">Clusters</a>
               </li>
               <li>
-                <a href="#tab-9462-2" data-toggle="tab" data-value="Summary">Classificar novo município</a>
+                <a class = 'tabbutton' href="#tab-9462-2" data-toggle="tab" data-tab = '2' data-value="Summary">Classificar novo município</a>
               </li>
               <li>
-                <a href="#tab-9462-3" data-toggle="tab" data-value="Table">Ajuda   </a>
+                <a class = 'tabbutton' href="#tab-9462-3" data-toggle="tab" data-tab = '3' data-value="Table">Ajuda   </a>
               </li>
             </ul>
 
             <div class="tab-content">
-              <div class="tab-pane active" data-value="Plot" id="tab-9462-1">
-            
 
+            <div class="tab-pane conteudo active" data-value="Plot" data-tab = '1' id="tab-9462-1">
+          
               <hr id="hr1">
                 <div class="row" id="0">
                 <div class = "col-lg-6 col-sm-6 col-md-6">        
                   <div class="boxCard">
                     <label class="card_label" id="logsclabel">
-                      Distribuição dos estados através dos clusters
+                      Distribuição dos clusters através das UFs
                     </label>
                     <hr class="hlinhas">
                     <div class="card">
@@ -141,7 +166,7 @@ background-color: #084270 !important;
                 <div class = "col-lg-6 col-sm-6 col-md-6 ">        
                   <div class="boxCard">
                     <label class="card_label" id="logsclabel">
-                      Dados Municipais Clusterizados
+                      Quantidade de municípios por cluster
                     </label>
                     <hr class="hlinhas">
                     <div class="card">
@@ -164,23 +189,53 @@ background-color: #084270 !important;
                 <div class = "col-lg-3 col-sm-12 col-md-12">        
                   <div class="infoBox">
                     <label class="card_label">
-                      KP1:
+                      Características do cluster 0
                     </label>
                     <div class="card">
 
                       <div class="card-body">
-                      </div>
+             
+Os municípios do cluster 0 possuem elevados índices de pobreza e desigualdade com índices de renda per capita muito baixos. Esse cluster possui os municipios com as menores expectativas de vida e elevados indices de analfabetismo em adultos. 
+O que pode indicar falta de saneamento básico e de infra-estrutura em geral. Essas condições implicam em uma menor expectativa de vida em relação aos demais clusters.
+
+<hr>
+<ul>
+<li>Rendas per capita muito baixas</li>
+<li>Maior intensidade de pobreza</li>
+<li>Elevadas taxas de mortalidade infantil</li>
+<li>Expectativa de vida muito baixa</li>
+<li>Elevadas taxas de adultos analfabetos</li>
+<li>Municipios subdesenvolvidos</li>
+</ul>
+
+                     </div>
                     </div>
                   </div>
                 </div>
+
                 <div class = "col-lg-3 col-sm-12 col-md-12">        
                   <div class="infoBox">
                     <label class="card_label">
-                      KP2:
+                      Características do cluster 1
                     </label>
 
                     <div class="card">
                       <div class="card-body">
+                        O cluster 1 engloba os municípios com os menores indices de Gini (maior igualdade) e rendas per-capita razoáveis. Observa-se o segundo menor indice de analfabetismo em adultos com mais de 25 anos, menos mortalidade infantil e elevada expectativa de vida As taxas de mortalidade infantil nesse cluster é bem baixa em relação aos outros clusters. Elevada expectativa de vida e baixa taxa de fecundidade
+
+                        <hr>
+
+<ul>
+<li>Municípios com distribuição de renda mais igualitária</li>
+<li>Menor intensidade de pobreza</li>
+<li>Baixa mortalidade infantil</li>
+</ul>
+
+
+
+
+
+
                       </div>
                     </div>
                   </div>
@@ -188,11 +243,25 @@ background-color: #084270 !important;
                 <div class = "col-lg-3 col-sm-6 col-md-6">        
                   <div class="infoBox">
                     <label class="card_label">
-                      KP3:
+                      Características do cluster 2:
                     </label>
 
                     <div class="card">
                       <div class="card-body">
+                        Esse é o cluster com maiores índices de riqueza per capita. No entanto, observa-se municípios com índices de gini acima de 0.8, o que indica que alguns municipios nesse cluster possuem elevada taxa de desigualdade. As pessoas tiveram uma quantidade elevada de anos de estudo e observa-se menor índice de analfabetismo. Nele, também observamos melhores condições de expectativa de vida, o que pode indicar melhores condições sanitarias, menor violência e menores índices de desigualdade. Esse cluster também abriga os municípios mais próximos de suas respectivas capitais.
+                        <hr>
+                        <ul>
+                          <li>Municípios mais desenvolvidos e com melhor infra estrutura</li>
+                          <li>Maiores índices de adultos alfabetizados</li>
+                          <li>Distribuição de renda assimétrica à direita: concentra rendas mais elevadas em poucos municipios</li>
+                        </ul>
+
+
+
+
+
+
+
                       </div>
                     </div>
                   </div>
@@ -201,10 +270,21 @@ background-color: #084270 !important;
                 <div class = "col-lg-3 col-sm-6 col-md-6">        
                   <div class="infoBox">
                     <label class="card_label">
-                      KP4:
+                      Características do cluster 3:
                     </label>
                     <div class="card">
                       <div class="card-body">
+                         <hr>
+                        <ul>
+                          <li>Municipios em desenvolvimento</li>
+                          <li>Pobreza moderada</li>
+                          <li>Municípios desiguais assim como no cluster 0</li>
+                          <li>Expectativa de vida razoável</li>
+                        </ul>
+              
+
+
+
                       </div>
                     </div>
                   </div>
@@ -218,10 +298,8 @@ background-color: #084270 !important;
               
             </div>
 
-            <div class="tab-pane" data-value="Summary" id="tab-9462-2">
-             <!--  <pre id="summary" class="shiny-text-output"></pre> -->
-             <br>
-             <br>
+            <div class="tab-pane conteudo" data-value="Summary" data-tab = '2' id="tab-9462-2">
+  
               <div class = 'row' id = 'tab2' >
              <div class = "col-lg-6 col-sm-6 col-md-6">        
                  <div class="boxCard">
@@ -240,7 +318,7 @@ background-color: #084270 !important;
               </div>
 
             </div>
-            <div class="tab-pane" data-value="Table" id="tab-9462-3">
+            <div class="tab-pane conteudo" data-value="Table" data-tab = '3' id="tab-9462-3">
               <div id="table" class="shiny-html-output"></div>
             </div>
           </div>
@@ -250,10 +328,6 @@ background-color: #084270 !important;
 </div>
 </div>
 </body>
-{{tags$script(src="https://cdn.plot.ly/plotly-1.6.3.min.js")}}
-{{tags$script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")}}
-{{tags$script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js")}}  
-{{includeScript("www/alert.js")}}
-{{tags$script("$.noConflict(true);")}}
+
                         </html>
 
