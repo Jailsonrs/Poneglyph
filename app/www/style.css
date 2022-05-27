@@ -16,6 +16,11 @@ if it's not present, don't show loader */
   background: url(Preloader_11.gif) center no-repeat #fff;
 }
 
+.filter {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
 #myNavbar   li a{ 
   color:white;
   height: 29px;
@@ -150,11 +155,14 @@ if it's not present, don't show loader */
 }
 
 .card_label{
-  margin: auto;
-  color: #db2606;
-  font-family: 'Baloo Chettan 2', cursive;
-  font-weight: 400;  
-  font-size: 18px;
+ display: block;
+ text-align: center;
+ line-height: 150%;
+ font-size: .85em;
+ color: #db2606;
+ font-family: 'Baloo Chettan 2', cursive;
+ font-weight: 400;  
+ font-size: 18px;
 }
 
 #hlinhas {
@@ -172,7 +180,7 @@ border-color: black;
   margin-top: 50px;
   padding-top: 1px;
   padding-left: 15px;
-  margin-left: -120px;
+  
   margin-bottom: 90px;
   border-radius: 8px;
 
@@ -268,11 +276,6 @@ div h4{
     margin-top: -20px   
 }
 
-#logsclabel{
-  margin-top: -60px;
-
-
-}
 
 
 .info-box{
@@ -319,12 +322,12 @@ div h4{
 }
 
 .nav-tabs li{
-  color:#E3E3E3;
+  color:#ff0000;
 
 
 }
 .nav-tabs li a{
-    color:blueviolet;
+    color:black;
     font-weight: old;
 }
 
@@ -335,7 +338,7 @@ div h4{
 
 .navbar{
   margin:0;
-  background:  radial-gradient(circle, rgba(251,252,255,0.9413188859528187) 41%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(90deg, rgba(255,57,57,1) 2%, rgba(255,111,13,1) 98%);
   min-height: 10px;
   height:78;
   border-radius: 0;
@@ -356,6 +359,10 @@ div h4{
 
 }
 
+.row {
+    margin-right: -15px;
+    margin-left: -115px;
+}
 .rodape{
     background-color: red;
     width: 100%;
