@@ -47,6 +47,7 @@ if it's not present, don't show loader */
   
 }
 .boxCard  {
+  display: block;
   float: none;
   margin:  auto;
   width: 100%;
@@ -54,10 +55,12 @@ if it's not present, don't show loader */
   min-height: 430px;
   min-width: 200px;
   max-width: 490;
-  background: white;
+  background: radial-gradient(circle, rgba(251,252,255,0.9413188859528187) 41%, rgba(255,255,255,1) 100%);
+  background-color: radial-gradient(circle, rgba(251,252,255,0.9413188859528187) 41%, rgba(255,255,255,1) 100%);;
   box-shadow: 0.4px 0.4px 2px #BFBFBF;
   padding-top: 30px;
   padding: 20px;
+  margin-left: -100px;
   padding-left: 25px;
   border-radius: 12px;
 }
@@ -150,11 +153,14 @@ if it's not present, don't show loader */
 }
 
 .card_label{
-  margin: auto;
-  color: #db2606;
-  font-family: 'Baloo Chettan 2', cursive;
-  font-weight: 400;  
-  font-size: 18px;
+ display: block;
+ text-align: center;
+ line-height: 150%;
+ font-size: .85em;
+ color: #db2606;
+ font-family: 'Baloo Chettan 2', cursive;
+ font-weight: 400;  
+ font-size: 18px;
 }
 
 #hlinhas {
@@ -172,7 +178,7 @@ border-color: black;
   margin-top: 50px;
   padding-top: 1px;
   padding-left: 15px;
-  margin-left: -120px;
+  margin-left: -100px;
   margin-bottom: 90px;
   border-radius: 8px;
 
@@ -268,12 +274,6 @@ div h4{
     margin-top: -20px   
 }
 
-#logsclabel{
-  margin-top: -60px;
-
-
-}
-
 
 .info-box{
         box-shadow: 0px 1px 10px grey;
@@ -308,6 +308,14 @@ div h4{
     background-color: red;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+.filter {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
 
 
 .nav-tabs{
@@ -324,7 +332,7 @@ div h4{
 
 }
 .nav-tabs li a{
-    color:blueviolet;
+    color:lightgrey;
     font-weight: old;
 }
 
@@ -335,7 +343,7 @@ div h4{
 
 .navbar{
   margin:0;
-  background:  radial-gradient(circle, rgba(251,252,255,0.9413188859528187) 41%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(90deg, rgba(40,75,126,1) 0%, rgba(238,61,38,1) 0%, rgba(250,118,29,1) 100%);
   min-height: 10px;
   height:78;
   border-radius: 0;
