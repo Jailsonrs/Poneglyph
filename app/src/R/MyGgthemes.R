@@ -14,8 +14,8 @@ tema2 <- theme(
   panel.background = element_rect(fill="white"),
   plot.background = element_rect(fill="white"),
   axis.title = element_text(colour="grey50",vjust=0.2),
-  axis.text.x=element_text(angle=45,hjust=1,face=2,size=7,colour="grey30"),
-  axis.text.y=element_text(colour="grey30",face=2,size=7),
+  axis.text.x=element_text(angle=45,hjust=1,face=2,size=10,colour="grey30"),
+  axis.text.y=element_text(colour="grey30",face=2,size=10),
   axis.ticks.y=element_line(colour="royalblue",size=2),
   axis.ticks.length=unit(.1,"cm"),
   panel.grid.minor.y=element_blank(),
@@ -28,5 +28,5 @@ tema2 <- theme(
   axis.title.x = element_text(size=10),
   plot.subtitle = element_text(size = 12, color = "darkslategrey", margin = ggplot2::margin(b = 25)),
   plot.caption = element_text(size = 8, margin = ggplot2::margin(t = 10), color = "slategray4", hjust = 0),
-  plot.margin = unit(c(.7,.5,.5,.5),"cm")
+  plot.margin = unit(c(.1,.1,.1,.1),"cm")
 )

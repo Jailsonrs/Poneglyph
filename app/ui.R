@@ -7,7 +7,8 @@ htmlTemplate("index.html",
 
             ##outputs
             out_df_clusterizado = DT::dataTableOutput("dt_clusterizado"),
-            clusters_reg = plotlyOutput('qtd_regiao')
+            clusters_reg = plotlyOutput('qtd_regiao'),
+            count_cluster = plotlyOutput('bar_cluster')
 )
 
 
