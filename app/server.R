@@ -84,7 +84,7 @@ function(session, input, output){
   		 stat_density_2d(aes(fill = ..density..), geom = "raster", contour = FALSE) +
   		 scale_x_continuous(expand = c(0, 0)) +
   		 scale_y_continuous(expand = c(0, 0)) +
-  		 scale_fill_viridis(option = 'rocket', direction = -1)+
+  		 scale_fill_viridis(option = 'rocket', direction = 1)+
   	     theme(panel.border = element_blank(),
 		       axis.line.x.bottom = element_line(size=0.2,colour='grey'),
 			   panel.grid.major.y = element_line(size=0.1, colour = "grey70"),
@@ -94,9 +94,24 @@ function(session, input, output){
 
 	})
 
+
 	output$densidade3d <- renderPlotly({
-	kd <- with(embeddings, MASS::kde2d(emb2, emb5, n = 50))
-	plot_ly(x = kd$x, y = kd$y, z = kd$z) %>% add_surface()
+		yaxis <- list(
+	  		title = 'Y-axis Title',
+		  	ticktext = list('long label','Very long label','3','label'),
+  			tickvals = list(1, 2, 3, 4),
+		    tickmode = "array",
+  			automargin = TRUE,
+  			titlefont = list(size=30)
+      )
+
+fig <- plot_ly(x = c('Apples', 'Oranges', 'Watermelon', 'Pears'), y = c(3, 1, 2, 4), width = 500, height = 500, type = 'bar')
+fig <- fig %>% layout(autosize = F, yaxis = yaxis)
+
+		kd <- with(embeddings, MASS::kde2d(emb2, emb5, n = 50))
+		plot_ly(x = kd$x, y = kd$y, z = kd$z, colors=rocket(50, alpha = 1, begin = 0, end = 1, direction = 1)) %>% add_surface() %>%
+		layout(autosize = T,yaxis = yaxis)
+
 	})
 	
 }

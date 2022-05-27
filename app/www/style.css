@@ -211,10 +211,14 @@ if it's not present, don't show loader */
   margin-top: 0px;
   font-weight: 400;
   margin-left:50px;
-  color: red;
+  color: red; 
+}
 
+.InputControls{
+    background-color: white;
+    background: white;
+    padding: 20px;
 
-  
 }
 
 .card_label{
@@ -237,19 +241,15 @@ border-color: black;
 .infoBox{
   width: 100%;
   height: 100%;
-  min-height: 200px;
-  min-width: 270px;
+  min-height: 120px;
+  min-width: 120px;
   background: white;
-  box-shadow: 1px 1px 2px #BFBFBF;
-  margin-top: 50px;
+  box-shadow: 0px 2px   7px #BFBFBF;
   padding-top: 1px;
   padding-left: 15px;
   padding: 20px;
-  margin-bottom: 90px;
-  border-radius: 8px;
-
-
-
+  margin-bottom: 10px;
+  border-radius: 2px;
 }
 
 .plotly .plot-container{
