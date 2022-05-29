@@ -17,7 +17,9 @@ htmlTemplate("index.html",
                 c("v1" = "cyl", "v2" = "am", "v3" = "gear")),
 
             ## OUTPUTS  
-
+            clst = withSpinner(plotlyOutput('clusters'), 
+                type = 3 , color = 'orange', color.background = 'orange'),
+            
             clusters_reg = withSpinner(plotlyOutput('qtd_regiao'),
                 type = 3 , color = 'orange', color.background = 'orange'),
 
@@ -29,6 +31,8 @@ htmlTemplate("index.html",
 
             d2d = withSpinner(plotlyOutput('densidade3d'), 
                 type = 3 , color = 'orange', color.background = 'orange'),
+
+
 
 
 

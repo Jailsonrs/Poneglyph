@@ -32,11 +32,27 @@ function(session, input, output){
 		df_cluster_unscalled
 	})
 
+	output$clusters <- renderPlotly({
+		embeddings %>% 
+		ggplot(aes(x = emb2,y = emb5, color = model+runif(5360,0,0.999)))+
+			geom_point()+
+			labs(color='clusters')+
+			labs(x = "Embedding 2", y = 'Embedding 5', fill="Cluster")+
+			scale_color_viridis(option='rocket', direction = -1, begin=0,end=1)+
+			tema2+
+			theme(panel.border = element_blank(),
+			      axis.line.x.bottom = element_line(size=0.2,colour='grey'),
+			      panel.grid.major.y = element_line(size=0.1, colour = "grey70"),
+			      axis.text.x=element_text(angle=0,hjust=1,face=2,size=10,colour="grey30")) -> gp
+		gp <- ggplotly(gp)
+		gp
+	})
+
 	output$qtd_regiao <- renderPlotly({
 		ggplot(filteredData(), aes(x =n,y = estado, fill= factor(model)))+
 		geom_col()+
 		labs(x = "n", y = 'UF', fill="Cluster")+
-		scale_fill_viridis(discrete=TRUE, option='rocket', direction = 1, begin=0.2,end=.8)+
+		scale_fill_viridis(discrete=TRUE, option='rocket', direction = -1, begin=0.18,end=.9)+
 		coord_flip()+
 		tema2 -> gp
 		gp <- ggplotly(gp)
