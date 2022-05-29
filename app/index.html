@@ -128,9 +128,9 @@ background-color: #084270 !important;
 
     <div class="container-fluid tab">
       <div class="container-fluid">
-        <div class="col-lg-12">
+       
+        <!-- <div class="col-lg-12"> -->
           <div class="tabbable tabs-above">
-
             <ul class="nav nav-tabs">
               <li >
                 <a class = 'tabbutton active' href="#tab-9462-1" data-toggle="tab" data-tab = '1' data-value="Plot">Clusters</a>
@@ -142,132 +142,69 @@ background-color: #084270 !important;
                 <a class = 'tabbutton' href="#tab-9462-3" data-toggle="tab" data-tab = '3' data-value="Table">Ajuda   </a>
               </li>
             </ul>
+          </div>
 
             <div class="tab-content">
 
-            <div class="tab-pane conteudo active" data-value="Plot" data-tab = '1' id="tab-9462-1">
+            <div class="tab-pane conteudo  active"   data-value="Plot" data-tab = '1' id="tab-9462-1">
           
                 <div class="row" id="0">
-                <div class = "col-lg-6 col-sm-6 col-md-6">        
-                  <div class="boxCard">
-                    <label class="card_label" id="logsclabel">
-                      Distribuição dos clusters através das UFs
-                    </label>
-                    <hr class="hlinhas">
-                    <div class="card">
-                      <div class="card-body">
-                        {{clusters_reg}}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- col-lg-offset-3 col-sm-offset-6 col-md-offset-6-->
-                <div class = "col-lg-6 col-sm-6 col-md-6 ">        
-                  <div class="boxCard">
-                    <label class="card_label" id="logsclabel">
-                      Quantidade de municípios por cluster
-                    </label>
-                    <hr class="hlinhas">
-                    <div class="card">
-                      <div class="card-body">
-                         {{count_cluster}}
+                  <div class = "col-lg-3 col-sm-12 col-md-12">        
+                    <div class="infoBox">
+                      <label class="card_label">
+                        Características do cluster 0
+                      </label>
+                      <div class="card">
+                        <div class="card-body">
+                            Os municípios do cluster 0 possuem elevados índices de pobreza e desigualdade com índices de renda per capita muito baixos. Esse cluster possui os municipios com as menores expectativas de vida e elevados indices de analfabetismo em adultos. 
+                            O que pode indicar falta de saneamento básico e de infra-estrutura em geral. Essas condições implicam em uma menor expectativa de vida em relação aos demais clusters.
+                        <hr>
+                        <ul>
+                          <li>Rendas per capita muito baixas</li>
+                          <li>Maior intensidade de pobreza</li>
+                          <li>Elevadas taxas de mortalidade infantil</li>
+                          <li>Expectativa de vida muito baixa</li>
+                          <li>Elevadas taxas de adultos analfabetos</li>
+                          <li>Municipios subdesenvolvidos</li>
+                        </ul>
 
                       </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <hr id="hr1">
-              <hr id="hr1">
-              <hr id="hr1">
-           
-
-
-               <div class="row" id="1">
-              
-                <div class = "col-lg-3 col-sm-12 col-md-12">        
-                  <div class="infoBox">
-                    <label class="card_label">
-                      Características do cluster 0
-                    </label>
-                    <div class="card">
-                      <div class="card-body">
-             
-Os municípios do cluster 0 possuem elevados índices de pobreza e desigualdade com índices de renda per capita muito baixos. Esse cluster possui os municipios com as menores expectativas de vida e elevados indices de analfabetismo em adultos. 
-O que pode indicar falta de saneamento básico e de infra-estrutura em geral. Essas condições implicam em uma menor expectativa de vida em relação aos demais clusters.
-
-<hr>
-<ul>
-<li>Rendas per capita muito baixas</li>
-<li>Maior intensidade de pobreza</li>
-<li>Elevadas taxas de mortalidade infantil</li>
-<li>Expectativa de vida muito baixa</li>
-<li>Elevadas taxas de adultos analfabetos</li>
-<li>Municipios subdesenvolvidos</li>
-</ul>
-
-                     </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class = "col-lg-3 col-sm-12 col-md-12">        
-                  <div class="infoBox">
+                       <div class="infoBox">
                     <label class="card_label">
                       Características do cluster 1
                     </label>
-
                     <div class="card">
                       <div class="card-body">
-                        O cluster 1 engloba os municípios com os menores indices de Gini (maior igualdade) e rendas per-capita razoáveis. Observa-se o segundo menor indice de analfabetismo em adultos com mais de 25 anos, menos mortalidade infantil e elevada expectativa de vida As taxas de mortalidade infantil nesse cluster é bem baixa em relação aos outros clusters. Elevada expectativa de vida e baixa taxa de fecundidade
-
-                        <hr>
-
-<ul>
-<li>Municípios com distribuição de renda mais igualitária</li>
-<li>Menor intensidade de pobreza</li>
-<li>Baixa mortalidade infantil</li>
-</ul>
-
-
-
-
-
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class = "col-lg-3 col-sm-6 col-md-6">        
-                  <div class="infoBox">
-                    <label class="card_label">
-                      Características do cluster 2:
-                    </label>
-
-                    <div class="card">
-                      <div class="card-body">
-                        Esse é o cluster com maiores índices de riqueza per capita. No entanto, observa-se municípios com índices de gini acima de 0.8, o que indica que alguns municipios nesse cluster possuem elevada taxa de desigualdade. As pessoas tiveram uma quantidade elevada de anos de estudo e observa-se menor índice de analfabetismo. Nele, também observamos melhores condições de expectativa de vida, o que pode indicar melhores condições sanitarias, menor violência e menores índices de desigualdade. Esse cluster também abriga os municípios mais próximos de suas respectivas capitais.
+                          O cluster 1 engloba os municípios com os menores indices de Gini (maior igualdade) e rendas per-capita razoáveis. Observa-se o segundo menor indice de analfabetismo em adultos com mais de 25 anos, menos mortalidade infantil e elevada expectativa de vida As taxas de mortalidade infantil nesse cluster é bem baixa em relação aos outros clusters. Elevada expectativa de vida e baixa taxa de fecundidade
                         <hr>
                         <ul>
-                          <li>Municípios mais desenvolvidos e com melhor infra estrutura</li>
-                          <li>Maiores índices de adultos alfabetizados</li>
-                          <li>Distribuição de renda assimétrica à direita: concentra rendas mais elevadas em poucos municipios</li>
+                          <li>Municípios com distribuição de renda mais igualitária</li>
+                          <li>Menor intensidade de pobreza</li>
+                          <li>Baixa mortalidade infantil</li>
                         </ul>
-
-
-
-
-
-
-
                       </div>
                     </div>
                   </div>
-                </div>
+                  <div class="infoBox">
+                  <label class="card_label">
+                    Características do cluster 2:
+                  </label>
+                  <div class="card">
+                    <div class="card-body">
+                          Esse é o cluster com maiores índices de riqueza per capita. No entanto, observa-se municípios com índices de gini acima de 0.8, o que indica que alguns municipios nesse cluster possuem elevada taxa de desigualdade. As pessoas tiveram uma quantidade elevada de anos de estudo e observa-se menor índice de analfabetismo. Nele, também observamos melhores condições de expectativa de vida, o que pode indicar melhores condições sanitarias, menor violência e menores índices de desigualdade. Esse cluster também abriga os municípios mais próximos de suas respectivas capitais.
+                        <hr>
+                      <ul>
+                        <li>Municípios mais desenvolvidos e com melhor infra estrutura</li>
+                        <li>Maiores índices de adultos alfabetizados</li>
+                        <li>Distribuição de renda assimétrica à direita: concentra rendas mais elevadas em poucos municipios</li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
 
-                <div class = "col-lg-3 col-sm-6 col-md-6">        
+
                   <div class="infoBox">
                     <label class="card_label">
                       Características do cluster 3:
@@ -281,23 +218,66 @@ O que pode indicar falta de saneamento básico e de infra-estrutura em geral. Es
                           <li>Municípios desiguais assim como no cluster 0</li>
                           <li>Expectativa de vida razoável</li>
                         </ul>
-              
-
-
-
                       </div>
                     </div>
                   </div>
                 </div>
+ 
+                <div class = "col-lg-6 col-sm-6 col-md-6">        
+                  <div class="boxCard">
+                    <hr class="hlinhas">
+                    <div class="card">
+                      <div class="card-body">
+
+                        <label class="card_label" id="logsclabel">
+                          Distribuição dos clusters através das UFs
+                       </label>
+                                                <hr>
+
+                        {{clusters_reg}}
+                        <hr class="hlinhas">
+
+                      <label class = 'card_label'>Quantidade de municípios por cluster</label>
+                      <hr class="hlinhas">
+                        {{count_cluster}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                    
+                                 
+                <div class = "col-lg-3 col-sm-6 col-md-6">    
+                  <div class="infoBox">
+                                             <hr>
+
+                    <label class="card_label">
+                        Gráfico de dispersão dos embeddings 2 e 5
+                    </label>
+
+                    <div class="card" style="text-align:center">
+                      <div class="card-body">
+                      <p> Embeddings gerados pelo algoritmo UMAP </p>
+                         <hr>
+                      {{clst}}
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
 
               </div>
+              <hr id="hr1">
+              <hr id="hr1">
+              <hr id="hr1">
+               <div class="row" id="1">
+   
 
-
-
-              
+              </div>
+    
           </div>
 
-        <div class="tab-pane conteudo" data-value="Summary" data-tab = '2' id="tab-9462-2">
+        <div class="tab-pane  conteudo " data-value="Summary" data-tab = '2' id="tab-9462-2">
           
           <div class = "row" >
               <div class="col-lg-12">
@@ -354,7 +334,7 @@ O que pode indicar falta de saneamento básico e de infra-estrutura em geral. Es
                 </div>
               </div>
 
-            <div class="tab-pane conteudo" data-value="Table" data-tab = '3' id="tab-9462-3">
+            <div class="tab-pane conteudo " data-value="Table" data-tab = '3' id="tab-9462-3">
               <div id="table" class="shiny-html-output"></div>
             </div>
           </div>
