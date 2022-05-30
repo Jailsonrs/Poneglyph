@@ -259,10 +259,18 @@ background-color: #084270 !important;
                       <p> Embeddings gerados pelo algoritmo UMAP </p>
                          <hr>
                       {{clst}}
+                    <hr class="hlinhas">
+
+                      <label class="card_label" id="logsclabel">
+                    Densidade 2D dos embeddings 2 e 5
+                    </label>
+                    <hr class="hlinhas">
+
+                      {{heatmap}}
+
                       </div>
                     </div>
-                  </div>
-
+                  </div>                  
 
                 </div>
 
@@ -280,31 +288,21 @@ background-color: #084270 !important;
         <div class="tab-pane  conteudo " data-value="Summary" data-tab = '2' id="tab-9462-2">
           
           <div class = "row" >
-              <div class="col-lg-12">
+              <div class="col-lg-2">
                 <div class="infoBox ">
-                  <div class = "col-lg-3 col-sm-6 col-md-6" >        
-                  {{n}}
-                </div>
-
-                <div class = "col-lg-3 col-sm-6 col-md-6">        
-                  {{n1}}
-                </div>
-
-                <div class = "col-lg-3 col-sm-6 col-md-6">        
-                  {{n2}}
-                </div>
-
-                <div class = "col-lg-3 col-sm-6 col-md-6">        
-                  {{n3}}
-                </div>
-
+                  {{file_input}}
+                
+                  {{header}}
+                   
+                  {{sep}}
+          
+                  {{quote}}
+            
+                  {{disp}}
                 </div>
                 
                </div>
-            </div>
-
-            <div class="row" >
-                <div class = "col-lg-6 col-sm-6 col-md-6">        
+               <div class = "col-lg-6 col-sm-6 col-md-6">        
                   <div class="boxCard">
                     <label class="card_label" id="logsclabel">
                     Densidade 3D
@@ -317,22 +315,9 @@ background-color: #084270 !important;
                     </div>
                   </div>
                 </div>
-                <!-- col-lg-offset-3 col-sm-offset-6 col-md-offset-6-->
-                <div class = "col-lg-6 col-sm-6 col-md-6 ">        
-                  <div class="boxCard">
-                    <label class="card_label" id="logsclabel">
-                    Densidade 2D dos embeddings 2 e 5
-                    </label>
-                    <hr class="hlinhas">
-                    <div class="card">
-                      <div class="card-body">
-                         {{heatmap}}
+            </div>
 
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        
 
             <div class="tab-pane conteudo " data-value="Table" data-tab = '3' id="tab-9462-3">
               <div id="table" class="shiny-html-output"></div>

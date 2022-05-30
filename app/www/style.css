@@ -375,6 +375,14 @@ div h4{
     background-color: red;
 }
 
+.backtab{
+    background-color: white;
+    width: 1000px;
+    height: 100%;
+    max-width: 40px;
+
+
+}
 
 
 .nav-tabs{
@@ -390,9 +398,13 @@ div h4{
 
 
 }
-.nav-tabs li a{
-    color:black;
+.nav-tabs>li>a{
+    margin-right: 2px;
+    line-height: 1.42857143;
+    color:#585858;
     font-weight: old;
+    border:  1px solid transparent;
+    border-radius: 20px 14px 0 0;
 }
 
 
@@ -505,7 +517,7 @@ body{
   flex: 1;
   background-color:  #ghostwhite;
   padding: 10px;
-  transition: all 0.6s linear;
+  transition: all 0.9s linear;
   cursor: pointer;
 }
 

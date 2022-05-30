@@ -9,9 +9,11 @@ library(viridis)
 library("scales")
 library(dplyr)
 library(hexbin)
-options(shiny.maxRequestSize = 500*1024^2)
 library(viridis)
+library(leaflet)
 
+MAX_REQ_SIZE = 500*1024^2
+options(shiny.maxRequestSize = MAX_REQ_SIZE)
 
 embeddings <- read.csv('./data/transformed/UMAP_embeddings.csv')
 df_municipios <- data.table::fread("./data/raw/dados_municipais.csv")
@@ -35,7 +37,7 @@ function(session, input, output){
 	output$clusters <- renderPlotly({
 		embeddings %>% 
 		ggplot(aes(x = emb2,y = emb5, color = model+runif(5360,0,0.999)))+
-			geom_point()+
+			geom_jitter(width=0.3,height=0.3, alpha=0.4)+
 			labs(color='clusters')+
 			labs(x = "Embedding 2", y = 'Embedding 5', fill="Cluster")+
 			scale_color_viridis(option='rocket', direction = -1, begin=0,end=1)+
@@ -113,22 +115,35 @@ function(session, input, output){
 
 	output$densidade3d <- renderPlotly({
 		yaxis <- list(
-	  		title = 'Y-axis Title',
+			title = 'Y-axis Title',
 		  	ticktext = list('long label','Very long label','3','label'),
   			tickvals = list(1, 2, 3, 4),
 		    tickmode = "array",
   			automargin = TRUE,
   			titlefont = list(size=30)
-      )
-
-fig <- plot_ly(x = c('Apples', 'Oranges', 'Watermelon', 'Pears'), y = c(3, 1, 2, 4), width = 500, height = 500, type = 'bar')
-fig <- fig %>% layout(autosize = F, yaxis = yaxis)
+  		)
 
 		kd <- with(embeddings, MASS::kde2d(emb2, emb5, n = 50))
-		plot_ly(x = kd$x, y = kd$y, z = kd$z, colors=rocket(50, alpha = 1, begin = 0, end = 1, direction = 1)) %>% add_surface() %>%
-		layout(autosize = T,yaxis = yaxis)
 
+		plot_ly(x = kd$x, y = kd$y, z = kd$z, 
+			colors = rocket(50, alpha = 1, begin = 0, end = 1, direction = 1)) %>% 
+			add_surface() %>%
+			layout(autosize = T,yaxis = yaxis)
 	})
+
+  output$contents <- renderTable({
+  	req(input$file1)
+  	df <- read.csv(input$file1$datapath,
+  		header = input$header,
+  		sep = input$sep,
+        quote = input$quote)
+    if (input$disp == "head") {
+    	return(head(df))
+    }
+    else {
+    	return(df)
+    }})
+
 	
 }
 
