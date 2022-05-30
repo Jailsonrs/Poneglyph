@@ -10,7 +10,6 @@ library("scales")
 library(dplyr)
 library(hexbin)
 library(viridis)
-library(leaflet)
 
 MAX_REQ_SIZE = 500*1024^2
 options(shiny.maxRequestSize = MAX_REQ_SIZE)
@@ -111,12 +110,10 @@ function(session, input, output){
   	     h3
 
 	})
-
-
 	output$densidade3d <- renderPlotly({
 		yaxis <- list(
 			title = 'Y-axis Title',
-		  	ticktext = list('long label','Very long label','3','label'),
+			ticktext = list('long label','Very long label','3','label'),
   			tickvals = list(1, 2, 3, 4),
 		    tickmode = "array",
   			automargin = TRUE,
@@ -131,18 +128,18 @@ function(session, input, output){
 			layout(autosize = T,yaxis = yaxis)
 	})
 
-  output$contents <- renderTable({
-  	req(input$file1)
-  	df <- read.csv(input$file1$datapath,
-  		header = input$header,
-  		sep = input$sep,
-        quote = input$quote)
-    if (input$disp == "head") {
-    	return(head(df))
-    }
-    else {
-    	return(df)
-    }})
+	output$contents <- renderTable({
+  		req(input$file1)
+  		df <- read.csv(input$file1$datapath,
+	  		header = input$header,
+  			sep = input$sep,
+        	quote = input$quote)
+    	if (input$disp == "head") {
+    		return(head(df))
+    	}
+    	else {
+    		return(df)
+    	}})
 
 	
 }
