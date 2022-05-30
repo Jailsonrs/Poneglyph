@@ -1,7 +1,7 @@
 
 Link para acessar o App: https://jailson-rodrigues.shinyapps.io/Cluster-test/
 
-### Estrutura do projeto
+### Project Structure
 ```
 .
 ├── app
@@ -49,6 +49,7 @@ Link para acessar o App: https://jailson-rodrigues.shinyapps.io/Cluster-test/
 
 
 ```
+### Screenshots
 
 ![alt text](appscreen.png)
 
