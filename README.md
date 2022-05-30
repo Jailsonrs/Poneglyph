@@ -17,13 +17,14 @@ Link para acessar o App: https://jailson-rodrigues.shinyapps.io/Cluster-test/
 │   ├── rsconnect
 │   │   └── shinyapps.io
 │   │       └── jailson-rodrigues
-│   │           ├── Cluster.dcf
-│   │           ├── Cluster-test.dcf
-│   │           └── Cluster-teste.dcf
+│   │           └── Cluster-test.dcf
 │   ├── server.R
 │   ├── src
 │   │   └── R
 │   │       ├── libs.R
+│   │       ├── modules
+│   │       │   ├── inputs.R
+│   │       │   └── outputs.R
 │   │       ├── multiClassSummary.R
 │   │       └── MyGgthemes.R
 │   ├── ui.R
@@ -45,6 +46,7 @@ Link para acessar o App: https://jailson-rodrigues.shinyapps.io/Cluster-test/
 │   ├── ranking.py
 │   └── sankey.R
 └── UMAP-GMM.ipynb
+
 
 
 ```
