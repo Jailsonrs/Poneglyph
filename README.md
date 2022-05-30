@@ -1,4 +1,3 @@
-# RetailClustering
 
 Link para acessar o App: https://jailson-rodrigues.shinyapps.io/Cluster-test/
 
