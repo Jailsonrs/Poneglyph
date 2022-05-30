@@ -53,5 +53,9 @@ Link para acessar o App: https://jailson-rodrigues.shinyapps.io/Cluster-test/
 
 ## Screenshots
 
+### App:
 ![alt text](appscreen.png)
+
+### Notebook:
+![alt text](notebookscreen.png)
 
