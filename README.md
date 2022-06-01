@@ -1,5 +1,5 @@
 
-Link para acessar o App: https://jailson-rodrigues.shinyapps.io/Cluster-dev/
+Acesse a versão em desenvovimento do App em: https://jailson-rodrigues.shinyapps.io/Cluster-dev/
 
 ## Project Structure
 
