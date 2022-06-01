@@ -1,0 +1,11 @@
+name: Cluster-dev
+title:
+username:
+account: jailson-rodrigues
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6412388
+bundleId: 5968344
+url: https://jailson-rodrigues.shinyapps.io/Cluster-dev/
+when: 1654099960.59601
+lastSyncTime: 1654099960.59602

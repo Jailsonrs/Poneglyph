@@ -1,13 +1,21 @@
-file_input <- fileInput("file1", "Faça o upload do dataset",
-    multiple = FALSE, accept = c("text/csv", "text/comma-separated-values,text/plain", ".csv"))
 
-header = checkboxInput("header", "Header", TRUE)
+fit_umap_btn <- actionButton("go", "Fit model")
 
-sep <- radioButtons("sep", "Separator",
-    choices = c(Comma = ",", Semicolon = ";", Tab = "\t"), selected = ",")
+file_input_btn <- actionButton("external_data", "Caregar outro dataset")
 
-quote <- radioButtons("quote", "Quote",
-    choices = c(None = "", "Double Quote" = '"', "Single Quote" = "'"),selected = '"')
 
-disp <- radioButtons("disp", "Display",  
-    choices = c(Head = "head", All = "all"), selected = "head")
+db_input <- selectInput("file1", "Selecione o dataset", choices = c("Censo Municipal", "Dataset 2"),
+    selected = "Censo Municipal")
+
+umap_init_method <- radioButtons("quote", "Método de inicialização",
+    choices = c("Random", "Spectral", "Laplacian"), selected = 'Laplacian')
+
+umap_n_neighbors <- sliderInput("header", "# Vizinhos", min  = 2, max = 1000, value = 10)
+
+umap_learning_rate <- sliderInput("sep", "Taxa de aprendizagem", min  = 0, max = 1, value = 0.2)
+
+umap_ncomponents <- sliderInput("sep", "# Componentes", min  = 2, max = 100, value = 10)
+    
+
+
+

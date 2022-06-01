@@ -548,9 +548,16 @@ body{
 
 #bootstrap-override button{
     
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: #489bff;
+    box-shadow: 2px 2px 2px #cacaca;
+    border-radius: 30px;
+    /*color: white;
     width:199px;
     margin-left: -15px; 
-    margin-top: 0px;
+    margin-top: 0px;*/
 
 }
 

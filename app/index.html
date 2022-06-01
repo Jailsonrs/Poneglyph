@@ -290,34 +290,32 @@ background-color: #084270 !important;
           <div class = "row" >
               <div class="col-lg-2">
                 <div class="infoBox ">
-                  {{file_input}}
-                
-                  {{header}}
-                   
-                  {{sep}}
-          
-                  {{quote}}
-            
-                  {{disp}}
+                  {{db_input}}
+                  <hr>
+                  {{file_input_btn}}
+                  <hr>
+                  {{umap_init_method}}
+                  {{umap_n_neighbors}}                             
+                  {{umap_learning_rate}}
+                  {{umap_ncomponents}}
+                  {{fit_umap_btn}}
                 </div>
                 
                </div>
-               <div class = "col-lg-6 col-sm-6 col-md-6">        
+               <div class = "col-lg-6 col-sm-6 col-md-6">   
                   <div class="boxCard">
-                    <label class="card_label" id="logsclabel">
-                    Densidade 3D
-                    </label>
-                    <hr class="hlinhas">
+                    <label class= 'card_label'>{{ExternalDatasetName}}</label>
+                    <hr class="hlinhas"/>
                     <div class="card">
-                      <div class="card-body">
-                        {{d2d}}
-                      </div>
-                    </div>
-                  </div>
+                      <div class="card-body"></div>
+                      {{tab}}
+                   </div>
+                 </div>
+
                 </div>
             </div>
 
-        
+
 
             <div class="tab-pane conteudo " data-value="Table" data-tab = '3' id="tab-9462-3">
               <div id="table" class="shiny-html-output"></div>

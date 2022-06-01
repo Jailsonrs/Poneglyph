@@ -12,3 +12,9 @@ heatmap = withSpinner(plotlyOutput('hist2d'),
 
 d2d = withSpinner(plotlyOutput('densidade3d'), 
     type = 3 , color = 'orange', color.background = 'orange')
+
+#placeholder <- uiOutput('datapanel')
+ExternalDatasetName <- textOutput('dataNames')
+tab <- dataTableOutput('external_dataset')
+
+

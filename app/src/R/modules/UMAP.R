@@ -1,5 +1,5 @@
 ## umap module
-# @ rtest 
+#' @ rtest 
 
 library(uwot)
 
