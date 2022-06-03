@@ -66,7 +66,7 @@ function(session, input, output){
     boxplotData() %>% group_by(model) %>% 
     count() %>%
       ggplot(aes(x = model, y = n))+
-      geom_col(fill = "orangered2",width=0.5, alpha = 0.9)+
+      geom_col(fill = "#354259",width=0.5, alpha = 0.9)+
         geom_text(aes(label=n),colour = 'white',
         size = 3,nudge_y = c(-100))+
       labs(x = "Cluster", y = 'Qtd')+

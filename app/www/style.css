@@ -224,11 +224,11 @@ if it's not present, don't show loader */
 .card_label{
  display: block;
  text-align: center;
- line-height: 150%;
+ line-height: 250%;
  font-size: .85em;
- color: #db2606;
+ color: #354259;
  font-family: 'Baloo Chettan 2', cursive;
- font-weight: 400;  
+ font-weight: 500;  
  font-size: 18px;
 }
 
@@ -413,13 +413,18 @@ div h4{
 }
 
 .navbar{
+  
+  overflow: hidden;
   margin:0;
-  background: linear-gradient(90deg, rgba(255,57,57,1) 2%, rgba(255,111,13,1) 98%);
+  padding-top: 1px;
+  /*background: linear-gradient(90deg, rgba(236,229,199,1) 0%, rgba(194,222,209,1) 48%);*/
+  background:  linear-gradient(90deg, rgba(247,246,243,1) 0%, rgba(194,222,209,1) 76%);
   min-height: 10px;
   height:78;
   border-radius: 0;
-  box-shadow: 1px 1px 3px grey;
+  box-shadow: 1px 1px 3px currentColor;
   margin-left: 0px;
+  height: 85px;
 }
 
 .content{
@@ -476,7 +481,6 @@ div h4{
 }
 
 .tab{
-    margin-top: 100px;
     margin-left: 100px; 
 }
 
@@ -498,7 +502,7 @@ div h4{
 
 
 .corpo{
-    background-color: #fafcfc;
+    background-color: white;
 
 }
 
@@ -624,3 +628,10 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
 
 /*////////////*/
 
+.navbar img {
+    margin-top: -17px;
+    width: 304px;
+    height: 115px;
+    position: fixed;
+
+}
