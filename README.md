@@ -53,10 +53,9 @@ Acesse a versão em desenvovimento do App em: https://jailson-rodrigues.shinyapp
 
 ## Screenshots
 
-### App:
 ![alt text](appscreen.png)
 
-### Notebook:
+### Application Structure:
 <p align="center">
   <img src="PoneghlypArct.png" />
 </p>
