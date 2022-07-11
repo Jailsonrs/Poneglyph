@@ -57,5 +57,5 @@ Acesse a versão em desenvovimento do App em: https://jailson-rodrigues.shinyapp
 ![alt text](appscreen.png)
 
 ### Notebook:
-![alt text](PoneghlypArc.png)
+![alt text](PoneghlypArc2.png)
 
