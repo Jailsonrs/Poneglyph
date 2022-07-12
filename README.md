@@ -1,4 +1,4 @@
- <p align='center'><img src="app/www/logo_noshadow.svg" /></p>
+ <p align='center'><img src="app/www/teste.drawio.svg" /></p>
  
 [Community](https://xgboost.ai/community) |
 [Documentation](https://xgboost.readthedocs.org) |
