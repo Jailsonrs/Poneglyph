@@ -1,6 +1,7 @@
 <p align='center'> 
   <img src="app/www/logo_noshadow.svg" />
 </p>
+
 ----
 
 [Community](https://xgboost.ai/community) |
