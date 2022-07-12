@@ -1,14 +1,16 @@
+<p align='center'> 
+  <img src="app/www/logo_noshadow.svg" />
+</p>
+____
 
-<img src="app/www/logo_noshadow.svg" />
-====
 [Community](https://xgboost.ai/community) |
 [Documentation](https://xgboost.readthedocs.org) |
 [Resources](demo/README.md) |
 [Contributors](CONTRIBUTORS.md) |
 [Release Notes](NEWS.md)
 
-XGBoost is an optimized distributed gradient boosting library designed to be highly ***efficient***, ***flexible*** and ***portable***.
-It implements machine learning algorithms under the [Gradient Boosting](https://en.wikipedia.org/wiki/Gradient_boosting) framework.
+Poneglyph is an optimized distributed advanced analytics as a service framework designed to be highly ***efficient***, ***flexible*** and ***scalable***.
+It implements machine learning algorithms such as UMAP and GMM to yield insights to shed light... under the [Gradient Boosting](https://en.wikipedia.org/wiki/Gradient_boosting) framework.
 XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way.
 The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
 Acesse a versão em desenvovimento do App em: https://jailson-rodrigues.shinyapps.io/Cluster-dev/
