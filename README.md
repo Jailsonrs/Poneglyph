@@ -1,9 +1,12 @@
+&nbsp;
+
+&nbsp;
+
  <p align='center'> <img src="app/www/teste.drawio.svg" width = "788px" height="220px"> </p>
  
 &nbsp;
 
 &nbsp;
-
 [Community](https://xgboost.ai/community) |
 [Documentation](https://xgboost.readthedocs.org) |
 [Resources](demo/README.md) |
