@@ -2,6 +2,7 @@
   <img src="app/www/logo_noshadow.svg" />
 </p>
 ----
+
 [Community](https://xgboost.ai/community) |
 [Documentation](https://xgboost.readthedocs.org) |
 [Resources](demo/README.md) |
