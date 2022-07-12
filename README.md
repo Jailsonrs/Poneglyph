@@ -25,7 +25,7 @@ It implements machine learning algorithms such as [UMAP](https://en.wikipedia.or
 
 #### Application Structure:
 <p align="center">
-  <img src="PoneghlypArct.png" />
+  <img src="PoneghlypArct.png"  >
 </p>
 
 #### Directory Structure
@@ -79,5 +79,5 @@ It implements machine learning algorithms such as [UMAP](https://en.wikipedia.or
 
 #### Screenshots
 
-![alt text](appscreen.png)
+<p align='center'> <img src="appscreen.png" width = "600px" height="320px"> </p>
 
