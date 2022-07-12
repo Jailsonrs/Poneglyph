@@ -8,7 +8,7 @@
 #
 
 Poneglyph is an optimized distributed advanced analytics as a service framework designed to be highly ***efficient***, ***flexible*** and ***scalable***.
-It implements machine learning algorithms such as [UMAP](https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction#Uniform_manifold_approximation_and_projection) and [Gaussian Mixture Models](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model) to yield  insights and shed light to business, industrey and scinentific problems. 
+It implements machine learning algorithms such as [UMAP](https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction#Uniform_manifold_approximation_and_projection) and [Gaussian Mixture Models](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model) to yield insights and shed light to business, industry and scinentific questions. 
 
 # 
 
