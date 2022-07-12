@@ -11,12 +11,12 @@
 [Release Notes](NEWS.md)
 
 Poneglyph is an optimized distributed advanced analytics as a service framework designed to be highly ***efficient***, ***flexible*** and ***scalable***.
-It implements machine learning algorithms such as [UMAP](https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction#Uniform_manifold_approximation_and_projection) and [Gaussian Mixture Models] to yield https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model) insights to shed light... under the [Gradient Boosting](https://en.wikipedia.org/wiki/Gradient_boosting) framework.
-XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way.
-The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
-Acesse a versão em desenvovimento do App em: https://jailson-rodrigues.shinyapps.io/Cluster-dev/
+It implements machine learning algorithms such as [UMAP](https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction#Uniform_manifold_approximation_and_projection) and [Gaussian Mixture Models](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model) to yield  insights and shed light to business, industrey and scinentific problems. 
 
-## Project Structure
+====
+#### Features 
+====
+#### Project Structure
 
 ```
 .
