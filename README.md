@@ -2,6 +2,7 @@
 <p align="center">
   <img src="app/www/logo_noshadow.svg" />
 </p>
+
 ===========
 
 [Community](https://xgboost.ai/community) |
@@ -15,7 +16,7 @@ It implements machine learning algorithms under the [Gradient Boosting](https://
 XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way.
 The same code runs on major distributed environment (Kubernetes, Hadoop, SGE, MPI, Dask) and can solve problems beyond billions of examples.
 
-
+===========
 
 Acesse a versão em desenvovimento do App em: https://jailson-rodrigues.shinyapps.io/Cluster-dev/
 
