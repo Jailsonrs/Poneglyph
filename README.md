@@ -1,7 +1,6 @@
 &nbsp;
 
 &nbsp;
-
  <p align='center'> <img src="app/www/teste.drawio.svg" width = "788px" height="220px"> </p>
  
 &nbsp;
