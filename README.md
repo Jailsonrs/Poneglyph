@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="design/logo_beta.png" />
+  <img src="app/www/logo_noshadow.svg" />
 </p>
 
 
