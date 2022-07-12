@@ -1,4 +1,11 @@
 
+<p align="center">
+  <img src="design/logo_beta.png" />
+</p>
+
+
+
+
 Acesse a versão em desenvovimento do App em: https://jailson-rodrigues.shinyapps.io/Cluster-dev/
 
 ## Project Structure
