@@ -1,10 +1,15 @@
- <p align='center'><img src="app/www/teste.drawio.svg" /></p>
+ <p align='center'> <img src="app/www/teste.drawio.svg" width = "788px" height="220px"> </p>
  
+&nbsp;
+
+&nbsp;
+
 [Community](https://xgboost.ai/community) |
 [Documentation](https://xgboost.readthedocs.org) |
 [Resources](demo/README.md) |
 [Contributors](CONTRIBUTORS.md) |
 [Release Notes](NEWS.md)
+
 #
 
 Poneglyph is an optimized distributed advanced analytics as a service framework designed to be highly ***efficient***, ***flexible*** and ***scalable***.
