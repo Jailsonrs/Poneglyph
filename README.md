@@ -73,5 +73,3 @@ It implements machine learning algorithms such as [UMAP](https://en.wikipedia.or
 
 #### Screenshots
 
-##<p align='center'> <img src="appscreen.png" width = "600px" height="320px"> </p>
-
